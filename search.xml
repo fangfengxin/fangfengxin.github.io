@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>Java面向对象</title>
-      <link href="/2020/01/java-/"/>
-      <url>/2020/01/java-/</url>
+      <title>Java面向对象（1）</title>
+      <link href="/2020/01/java-object-oriented-1/"/>
+      <url>/2020/01/java-object-oriented-1/</url>
       
-        <content type="html"><![CDATA[<h1 id="面向对象思想"><a href="#面向对象思想" class="headerlink" title="面向对象思想"></a>面向对象思想</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Java 语言是一种面向对象的程序设计语言，而面向对象思想是一种程序设计思想，我们在面向对象思想的指引下，<br>使用 Java 语言去设计、开发计算机程序。 这里的对象泛指现实中一切事物，每种事物都具备自己的属性和行为。</p><p>面向对象思想就是在计算机程序设计过程中，参照现实中事物，<strong>将属性特征、行为特征抽象出来，描述成计算机事件</strong>的设计思想。 它区别于面向过程思想，<strong>强调的是通过调用对象的行为来实现功能</strong>，而不是自己一步一步的去操作实现。</p><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>面向对象思想是一种更符合我们思考习惯的思想，它可以将复杂的事情简单化，并将我们从执行者变成了指挥者。<br>面向对象的语言中，包含了<strong>三大基本特征，即封装、继承和多态。</strong></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="面向对象思想"><a href="#面向对象思想" class="headerlink" title="面向对象思想"></a>面向对象思想</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Java 语言是一种面向对象的程序设计语言，而面向对象思想是一种程序设计思想，我们在面向对象思想的指引下，<br>使用 Java 语言去设计、开发计算机程序。 这里的对象泛指现实中一切事物，每种事物都具备自己的属性和行为。</p><p>面向对象思想就是在计算机程序设计过程中，参照现实中事物，<strong>将属性特征、行为特征抽象出来，描述成计算机事件</strong>的设计思想。 它区别于面向过程思想，<strong>强调的是通过调用对象的行为来实现功能</strong>，而不是自己一步一步的去操作实现。</p><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>面向对象思想是一种更符合我们思考习惯的思想，它可以将复杂的事情简单化，并将我们从执行者变成了指挥者。<br>面向对象的语言中，包含了<strong>三大基本特征，即封装、继承和多态。</strong></p><h1 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h1><h2 id="什么是类和对象"><a href="#什么是类和对象" class="headerlink" title="什么是类和对象"></a>什么是类和对象</h2><p><strong>类</strong>：是一组相关<strong>属性</strong>和<strong>行为</strong>的集合。可以看成是一类事物的模板，使用事物的属性特征和行为特征来描述该<br>类事物。</p><ul><li><strong>属性</strong>：就是该事物的状态信息。</li><li><strong>行为</strong>：就是该事物能够做什么。</li></ul><p><strong>对象</strong>：是一类事物的具体体现。对象是<strong>类的一个实例</strong>，必然具备该类事物的属性和行为。</p><p>类和对象的关系：</p><ul><li>类是对一类事物的描述，是<strong>抽象</strong>的。</li><li>对象是一类事物的实例，是<strong>具体</strong>的。</li><li><strong>类是对象的模板，对象是类的实例。</strong></li></ul><h2 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h2><p>Java 中用类（<code>class</code>） 来描述事物：</p><ul><li><strong>成员变量</strong>（属性）</li><li><strong>成员方法</strong>（行为）</li></ul><p>类的定义格式：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassName</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 成员变量</span></span><br><span class="line">    <span class="comment">// 成员方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>注意事项：</p><ol><li>成员变量直接定义在<strong>类中、方法外</strong>；</li><li>成员方法<strong>不加 static 关键字</strong>。</li></ol><h2 id="对象的使用"><a href="#对象的使用" class="headerlink" title="对象的使用"></a>对象的使用</h2><p>通常情况下，一个类不能直接使用，需要根据类创建一个对象才能使用。</p><p>创建对象：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ClassName objectName  = <span class="keyword">new</span> ClassName();</span><br></pre></td></tr></table></figure><p>使用对象访问类中的成员：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">objectName.成员变量名</span><br><span class="line">objectName.成员方法名(参数)</span><br></pre></td></tr></table></figure><p>成员变量的默认值：</p><div class="table-container"><table><thead><tr><th>数据类型</th><th>默认值</th></tr></thead><tbody><tr><td>整数（byte、short、int、long）</td><td>0</td></tr><tr><td>浮点数（float、double）</td><td>0.0</td></tr><tr><td>字符（char）</td><td>\u0000</td></tr><tr><td>布尔（boolean）</td><td>false</td></tr><tr><td>引用（数组、类、接口）</td><td>null</td></tr></tbody></table></div><h2 id="对象内存原理"><a href="#对象内存原理" class="headerlink" title="对象内存原理"></a>对象内存原理</h2><ul><li>创建的对象存储在堆内存中<ul><li>成员变量</li><li>成员方法标记值（成员方法的地址值）</li></ul></li><li>类的信息存储在方法区中<ul><li>成员方法的信息</li></ul></li><li>程序运行在栈内存中<ul><li>main 方法首先入栈，最后出栈<ul><li>局部变量</li><li>引用变量（对象地址值）</li></ul></li><li>成员方法不断压栈和出栈<ul><li>局部变量</li></ul></li></ul></li></ul><h2 id="使用对象类型作为方法的参数和返回值"><a href="#使用对象类型作为方法的参数和返回值" class="headerlink" title="使用对象类型作为方法的参数和返回值"></a>使用对象类型作为方法的参数和返回值</h2><p>引用类型作为参数和返回值时，传递的都是地址值。</p><h2 id="成员变量和局部变量的区别"><a href="#成员变量和局部变量的区别" class="headerlink" title="成员变量和局部变量的区别"></a>成员变量和局部变量的区别</h2><p>变量根据<strong>定义位置的不同</strong>分成成员变量和局部变量两种：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassName</span> </span>&#123;</span><br><span class="line">    数据类型 成员变量名;<span class="comment">// 成员变量</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        数据类型 局部变量名;<span class="comment">// 局部变量</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>在类中的位置不同<ul><li>成员变量：类中、方法外</li><li>局部变量：方法中或者方法声明中（形式参数）</li></ul></li><li>作用范围不同<ul><li>成员变量：类中</li><li>局部变量：方法中</li></ul></li><li>初始化值不同<ul><li>成员变量：有默认值</li><li>局部变量：没有默认值，必须定义后赋值才能使用</li></ul></li><li>在内存中的位置不同<ul><li>成员变量：堆内存</li><li>局部变量：栈内存</li></ul></li><li>生命周期不同<ul><li>成员变量：随着对象的创建而存在，随着对象的消失而消失</li><li>局部变量：随着方法的调用而存在，随着方法调用完毕而消失</li></ul></li></ul><h1 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h1><h2 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h2><p>面向对象编程语言是对客观世界的模拟，客观世界里成员变量都是隐藏在对象内部的，外界无法直接操作和修改。封装可以被认为是一个保护屏障，防止该类的代码和数据被其他类随意访问。要访问该类的数据，必须通过指定的方式。适当的封装可以让代码更容易理解与维护，也加强了代码的安全性。</p><p>封装就是将一些细节信息隐藏起来，对于外界不可见。封装性在 Java 当中的体现：</p><ol><li><code>方法</code> 就是一种封装：调用者只知道方法会完成什么功能，并不知道功能具体是如何实现的。</li><li>关键字 <code>private</code> 也是一种封装：将类的属性隐藏起来，若需要访问某个属性，提供公共方法对其访问。</li></ol><h2 id="private-关键字"><a href="#private-关键字" class="headerlink" title="private 关键字"></a><code>private</code> 关键字</h2><p> <code>private</code> 的含义：</p><ul><li>private 是一个<strong>权限修饰符</strong>，代表最小权限，可以修饰成员变量和成员方法。</li><li>被 private 修饰后的成员变量和成员方法，<strong>在本类当中仍可以随意访问</strong>，但是超出了本类范围之外就不能再直接访问了。</li></ul><p>间接访问 private 成员变量：定义 <code>getXxx</code> 方法和 <code>setXxx</code> 方法</p><ul><li>Getter 方法：不能有参数，返回值类型和成员变量对应</li><li>Setter 方法：不能有返回值，参数类型和成员变量对应</li><li>对于基本类型当中的 boolean 值，Getter 方法一定要写成 <code>isXxx</code> 的形式，而 setXxx 规则不变</li></ul><h2 id="this-关键字"><a href="#this-关键字" class="headerlink" title="this 关键字"></a><code>this</code> 关键字</h2><p>当方法的局部变量和类的成员变量重名的时候，根据“就近原则”，会优先使用局部变量，导致成员变量被隐藏，无法访问成员变量。</p><p>如果需要访问本类当中的成员变量，需要使用 <code>this</code> 关键字。使用格式为：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.成员变量名</span><br></pre></td></tr></table></figure><p>使用 this 关键字代表所在类的当前对象的引用（地址值），即对象自己的引用。<strong>谁在调用，谁就是this。</strong> </p><h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><p>当我们<strong>通过关键字 new 来创建对象时，其实就是在调用构造方法。</strong>构造方法专门用来初始化对象，给对象的成员变量赋初始值。</p><p>构造方法的格式：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">ClassName</span><span class="params">(参数类型 参数名称, ...)</span> </span>&#123;</span><br><span class="line">    方法体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>构造方法的名称必须与所在类的类名完全一致</li><li>构造方法<strong>没有返回值类型</strong>，也不能返回一个值</li><li>如果没有自定义构造方法，编译器会默认提供一个<strong>无参构造方法</strong> <code>public ClassName() {}</code> </li><li>一旦自定义构造方法，编译器不再提供默认的无参构造方法</li><li>构造方法可以重载</li></ul><h2 id="标准的类（JavaBean）"><a href="#标准的类（JavaBean）" class="headerlink" title="标准的类（JavaBean）"></a>标准的类（JavaBean）</h2><p>一个标准的类通常要满足下面的条件：</p><ol><li>类是具体的和公共的；</li><li>所有的成员变量都使用 private 关键字修饰；</li><li>为每一个成员变量都提供一对 Getter/Setter 方法；</li><li>必须具有一个无参数的构造方法；</li><li>建议具有一个全参数的构造方法；</li></ol><p>这样的标准规范也叫做 <code>Java Bean</code> ，格式如下：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassName</span></span>&#123;</span><br><span class="line"><span class="comment">//成员变量</span></span><br><span class="line"><span class="comment">//构造方法，无参构造方法【必须】，有参构造方法【建议】</span></span><br><span class="line"><span class="comment">//成员方法</span></span><br><span class="line"><span class="comment">//getXxx()</span></span><br><span class="line"><span class="comment">//setXxx()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -25,6 +25,22 @@
             <tag> Java </tag>
             
             <tag> Java面向对象 </tag>
+            
+            <tag> 类 </tag>
+            
+            <tag> 对象 </tag>
+            
+            <tag> 成员变量 </tag>
+            
+            <tag> 局部变量 </tag>
+            
+            <tag> 封装 </tag>
+            
+            <tag> private关键字 </tag>
+            
+            <tag> this关键字 </tag>
+            
+            <tag> 构造方法 </tag>
             
         </tags>
       
@@ -583,9 +599,9 @@
             
             <tag> 算法导论 </tag>
             
-            <tag> 分治法 </tag>
-            
             <tag> 归并排序 </tag>
+            
+            <tag> 分治法 </tag>
             
             <tag> 二分查找 </tag>
             
@@ -620,11 +636,11 @@
             
             <tag> 算法导论 </tag>
             
-            <tag> 归并排序 </tag>
-            
             <tag> 算法分析 </tag>
             
             <tag> 插入排序 </tag>
+            
+            <tag> 归并排序 </tag>
             
             <tag> 渐进分析 </tag>
             
