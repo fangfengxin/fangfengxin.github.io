@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Java面向对象</title>
+      <link href="/2020/01/java-/"/>
+      <url>/2020/01/java-/</url>
+      
+        <content type="html"><![CDATA[<h1 id="面向对象思想"><a href="#面向对象思想" class="headerlink" title="面向对象思想"></a>面向对象思想</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Java 语言是一种面向对象的程序设计语言，而面向对象思想是一种程序设计思想，我们在面向对象思想的指引下，<br>使用 Java 语言去设计、开发计算机程序。 这里的对象泛指现实中一切事物，每种事物都具备自己的属性和行为。</p><p>面向对象思想就是在计算机程序设计过程中，参照现实中事物，<strong>将属性特征、行为特征抽象出来，描述成计算机事件</strong>的设计思想。 它区别于面向过程思想，<strong>强调的是通过调用对象的行为来实现功能</strong>，而不是自己一步一步的去操作实现。</p><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>面向对象思想是一种更符合我们思考习惯的思想，它可以将复杂的事情简单化，并将我们从执行者变成了指挥者。<br>面向对象的语言中，包含了<strong>三大基本特征，即封装、继承和多态。</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Java面向对象 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Java面向对象 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java基础（4）</title>
       <link href="/2020/01/java-fundamentals-4/"/>
       <url>/2020/01/java-fundamentals-4/</url>
@@ -12,6 +41,8 @@
       
       
       <categories>
+          
+          <category> Java </category>
           
           <category> Java基础 </category>
           
@@ -43,6 +74,8 @@
       
       
       <categories>
+          
+          <category> Java </category>
           
           <category> Java基础 </category>
           
@@ -85,6 +118,8 @@
       
       <categories>
           
+          <category> Java </category>
+          
           <category> Java基础 </category>
           
       </categories>
@@ -117,6 +152,8 @@
       
       
       <categories>
+          
+          <category> Java </category>
           
           <category> Java基础 </category>
           
@@ -546,9 +583,9 @@
             
             <tag> 算法导论 </tag>
             
-            <tag> 分治法 </tag>
-            
             <tag> 归并排序 </tag>
+            
+            <tag> 分治法 </tag>
             
             <tag> 二分查找 </tag>
             
@@ -583,11 +620,11 @@
             
             <tag> 算法导论 </tag>
             
-            <tag> 归并排序 </tag>
-            
             <tag> 算法分析 </tag>
             
             <tag> 插入排序 </tag>
+            
+            <tag> 归并排序 </tag>
             
             <tag> 渐进分析 </tag>
             
