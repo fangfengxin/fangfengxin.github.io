@@ -4,6 +4,64 @@
   
     
     <entry>
+      <title>Java面向对象（2）</title>
+      <link href="/2020/01/java-object-oriented-2/"/>
+      <url>/2020/01/java-object-oriented-2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><p>多个类中存在相同属性和行为时，将这些内容抽取到单独一个类中，那么多个类无需再定义这些属性和行为，只要<br>继承那一个类即可。其中，多个类可以称为 <strong><code>子类</code></strong> ，单独那一个类称为 <strong><code>父类</code></strong> 、超类（superclass）或者基类。</p><p><strong>继承</strong>：就是子类继承父类的<strong>属性和行为</strong>，使得子类对象具有与父类相同的属性、相同的行为。子类可以直接访问父类中的非私有的属性和行为。</p><p>继承描述的是事物之间的所属关系，这种关系是 <strong><code>is-a</code></strong> 的关系。“子类就是一个父类”，也就是说，子类可以被当做父类看待。可见，父类更通用，子类更具体。我们通过继承，可以使多种事物之间形成一种关系体系。</p><h2 id="extends-关键字"><a href="#extends-关键字" class="headerlink" title="extends 关键字"></a><code>extends</code> 关键字</h2><p>通过 <code>extends</code> 关键字，可以声明一个子类继承另外一个父类，定义格式如下：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 父类 </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> 子类 <span class="keyword">extends</span> 父类 </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="继承后的成员变量"><a href="#继承后的成员变量" class="headerlink" title="继承后的成员变量"></a>继承后的成员变量</h2><h3 id="成员变量的访问"><a href="#成员变量的访问" class="headerlink" title="成员变量的访问"></a>成员变量的访问</h3><p>在父子类的继承关系当中：</p><ul><li>如果成员变量<strong>不重名</strong>，这时的访问是没有影响的</li><li>如果成员变量<strong>重名</strong>，则创建子类对象时，访问有两种方式：<ul><li><strong>直接</strong>通过子类对象访问成员变量： <code>等号左边是谁，就优先用谁，没有则向上找。</code> </li><li><strong>间接</strong>通过成员方法访问成员变量： <code>该方法属于谁，就优先用谁，没有则向上找。</code> </li></ul></li></ul><h3 id="super-关键字"><a href="#super-关键字" class="headerlink" title="super 关键字"></a><code>super</code> 关键字</h3><p>当子类和父类中出现了同名的成员变量时，如果在子类中需要访问父类中非私有成员变量，需要使用 <code>super</code> 关键字修饰父类成员变量，类似于 <code>this</code> 。</p><h3 id="访问重名的三种变量"><a href="#访问重名的三种变量" class="headerlink" title="访问重名的三种变量"></a>访问重名的三种变量</h3><p>访问重名的局部变量、本类成员变量和父类成员变量：</p><ul><li>局部变量： <code>直接写成员变量名</code> </li><li>本类的成员变量： <code>this.成员变量名</code> </li><li>父类的成员变量： <code>super.成员变量名</code> </li></ul><h2 id="继承后的成员方法"><a href="#继承后的成员方法" class="headerlink" title="继承后的成员方法"></a>继承后的成员方法</h2><h3 id="成员方法的调用"><a href="#成员方法的调用" class="headerlink" title="成员方法的调用"></a>成员方法的调用</h3><p>在父子类继承关系中：</p><ul><li>如果成员方法不重名，这时的调用是没有影响的， <code>创建的对象是谁，就优先用谁，如果没有则向上找。</code> </li><li>如果成员方法重名，这是的访问是一种特殊情况，叫做 <strong>方法重写（Override）</strong> 。</li></ul><h3 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h3><p><strong>方法重写</strong> ：子类中出现与父类一模一样的方法时（返回值类型，方法名和参数列表都相同），会出现覆盖效<br>果。即方法的<strong>声明不变，重新实现。</strong> </p><ul><li>特点：创建的是子类对象，则优先用子类方法。</li><li>注意事项：<ol><li>必须保证父子类之间方法的名称相同，参数列表也相同； <code>@Override</code> </li><li>子类方法的返回值必须<strong>小于等于</strong>父类方法的返回值范围；</li><li>子类方法的权限必须<strong>大于等于</strong>父类方法的权限修饰符。 <code>public &gt; protected &gt; (default) &gt; private</code> </li></ol></li></ul><h2 id="继承后的构造方法"><a href="#继承后的构造方法" class="headerlink" title="继承后的构造方法"></a>继承后的构造方法</h2><p>构造方法的格式和作用：</p><ul><li>构造方法是与类名一致的，所以子类无法继承父类的构造方法。</li><li>构造方法是用来初始化成员变量的，所以在子类的初始化过程中，必须先执行父类的初始化动作。</li></ul><p>继承关系中，父子类构造方法的访问特点：</p><ol><li>子类构造方法当中有一个默认隐含的 <code>super()</code> 调用，所以一定是先调用的父类构造方法，后执行的子类构造方法。</li><li>子类构造方法可以通过 <code>super</code> 关键字来调用父类重载的构造方法。</li><li>super 的父类构造方法调用，必须是子类构造方法的第一个语句。</li><li>不能一个子类构造方法调用多次 super 构造方法。</li></ol><p>总结：子类构造方法必须调用父类构造方法，不写则隐含 super()；写了则调用写的指定的 super 调用。super 只能有一个，且必须是第一个。</p><h2 id="super-与-this"><a href="#super-与-this" class="headerlink" title="super 与 this"></a><code>super</code> 与 <code>this</code></h2><h3 id="父类空间优先于子类对象产生"><a href="#父类空间优先于子类对象产生" class="headerlink" title="父类空间优先于子类对象产生"></a>父类空间优先于子类对象产生</h3><p>在每次创建子类对象时，先初始化父类空间，再创建其子类对象本身。目的在于<strong>子类对象中包含了其对应的父类空间</strong>，便可以包含其父类的成员，如果父类成员非 private 修饰，则子类可以随意使用父类成员。代码体现在子类的构造方法调用时，一定先调用父类的构造方法。</p><ul><li><code>super</code>  ：代表父类的存储空间标识。</li><li><code>this</code>  ：代表当前对象的引用。</li></ul><h3 id="含义与用法总结"><a href="#含义与用法总结" class="headerlink" title="含义与用法总结"></a>含义与用法总结</h3><p> <code>super</code> 关键字用来访问父类内容，用法有三种：</p><ol><li>在子类的成员方法中，访问父类的成员变量。</li><li>在子类的成员方法中，访问父类的成员方法。</li><li>在子类的构造方法中，访问父类的构造方法。</li></ol><p> <code>this</code> 关键字同来访问本类内容，用法也有三种：</p><ol><li>在本类的成员方法中，访问本类的成员变量。</li><li>在本类的成员方法中，访问本类的另一个成员方法。</li><li>在本类的构造方法中，访问本类的另一个构造方法。</li></ol><p>注意事项： <code>this(...)</code> 和 <code>super(...)</code> 调用都必须是构造方法的第一个语句，且是唯一一个，因此 super 和 this 两种构造方法调用不能同时使用。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fu</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> num = <span class="number">30</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Zi</span> <span class="keyword">extends</span> <span class="title">Fu</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">20</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Zi</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// super(); // 这一行不再默认添加</span></span><br><span class="line">        <span class="keyword">this</span>(<span class="number">123</span>); <span class="comment">// 本类的无参构造，调用本类的有参构造</span></span><br><span class="line">        <span class="comment">// this(1, 2); // 错误写法！</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Zi</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Zi</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 隐含super();</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showNum</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">10</span>;</span><br><span class="line">        System.out.println(num); <span class="comment">// 局部变量</span></span><br><span class="line">        System.out.println(<span class="keyword">this</span>.num); <span class="comment">// 本类中的成员变量</span></span><br><span class="line">        System.out.println(<span class="keyword">super</span>.num); <span class="comment">// 父类中的成员变量</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"AAA"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.methodA();</span><br><span class="line">        System.out.println(<span class="string">"BBB"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="继承的特点"><a href="#继承的特点" class="headerlink" title="继承的特点"></a>继承的特点</h2><ol><li>Java 只支持 <strong><code>单继承</code></strong> ，不支持多继承。一个类的直接父类只能有唯一一个。</li><li>Java 支持 <strong><code>多级继承</code></strong> 。所有类都默认继承 <code>java.lang.Object</code> 类。</li><li>一个类的直接父类是唯一的，但是一个父类可以拥有多个子类。</li></ol><h1 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h1><p>父类中的方法，被它的子类们重写，子类各自的实现都不尽相同。那么父类的方法声明和方法体，只有声明还有意义，而方法体则没有存在的意义了。我们把<strong>没有方法体的方法称为抽象方法</strong>。Java语法规定，<strong>包含抽象方法的类就是抽象类。</strong> </p><h2 id="abstract-关键字"><a href="#abstract-关键字" class="headerlink" title="abstract 关键字"></a><code>abstract</code> 关键字</h2><p>抽象方法定义格式：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修饰符 <span class="keyword">abstract</span> 返回值类型 方法名();</span><br></pre></td></tr></table></figure><p>抽象类定义格式：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 <span class="keyword">abstract</span> 类名 &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="抽象方法和抽象类的使用"><a href="#抽象方法和抽象类的使用" class="headerlink" title="抽象方法和抽象类的使用"></a>抽象方法和抽象类的使用</h2><p>如何使用抽象类和抽象方法：</p><ol><li>不能直接创建 new 抽象类对象。</li><li>必须用一个子类来继承抽象父类。</li><li>子类必须重写抽象父类当中所有的抽象方法。</li><li>创建子类对象进行使用。</li></ol><p>继承抽象类的子类必须重写父类所有的抽象方法。否则，该子类也必须声明为抽象类。最终，必须有子类实现该父<br>类的抽象方法，否则，从最初的父类到最终的子类都不能创建对象，失去意义。</p><p>此时的方法重写，是子类对父类抽象方法的完成实现，我们将这种方法重写的操作，也叫做实现方法。</p><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol><li>抽象类不能创建对象。</li><li>抽象类中可以有构造方法，是供子类创建对象时，初始化父类成员使用的。</li><li>抽象类中不一定包含抽象方法，但是有抽象方法的类必定是抽象类。</li><li>抽象类的子类必须重写抽象父类中所有的抽象方法，否则该子类也是抽象类。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Java面向对象 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Java面向对象 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java语言高级（1）</title>
+      <link href="/2020/01/java-advanced-1/"/>
+      <url>/2020/01/java-advanced-1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Java语言高级 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Java语言高级 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java面向对象（1）</title>
       <link href="/2020/01/java-object-oriented-1/"/>
       <url>/2020/01/java-object-oriented-1/</url>
