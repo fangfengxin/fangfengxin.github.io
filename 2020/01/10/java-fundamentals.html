@@ -1193,20 +1193,20 @@ op1=>operation: 步骤1
 op2=>operation: 步骤2
 opdots=>operation: ...
 opn=>operation: 步骤n
-st->op1->op2->opdots->opn->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">op1=>operation: 其他语句
+st->op1->op2->opdots->opn->e</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">op1=>operation: 其他语句
 cond=>condition: 关系表达式
 op2=>operation: 语句体
 op3=>operation: 其他语句
 op1->cond
 cond(yes)->op2->op3
-cond(no)->op3</textarea><textarea id="flowchart-1-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script><textarea id="flowchart-2-code" style="display: none">op1=>operation: 其他语句
+cond(no)->op3</textarea><textarea id="flowchart-1-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script><textarea id="flowchart-2-code" style="display: none">op1=>operation: 其他语句
 op2=>operation: 其他语句
 cond=>condition: 关系表达式
 op3=>operation: 语句体1
 op4=>operation: 语句体2
 op1->cond
 cond(yes)->op3->op2
-cond(no)->op4->op2</textarea><textarea id="flowchart-2-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-2-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-2-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-2", options);</script><textarea id="flowchart-3-code" style="display: none">st=>operation: 其他语句
+cond(no)->op4->op2</textarea><textarea id="flowchart-2-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-2-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-2-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-2", options);</script><textarea id="flowchart-3-code" style="display: none">st=>operation: 其他语句
 e=>operation: 其他语句
 cond1=>condition: 判断条件1
 cond2=>condition: 判断条件2
@@ -1225,7 +1225,7 @@ cond2(no)->conddots
 conddots(yes)->opdots->e
 conddots(no)->condn
 condn(yes)->opn->e
-condn(no)->opn+1->e</textarea><textarea id="flowchart-3-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-3-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-3-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-3", options);</script><textarea id="flowchart-4-code" style="display: none">st=>operation: 其他语句
+condn(no)->opn+1->e</textarea><textarea id="flowchart-3-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-3-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-3-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-3", options);</script><textarea id="flowchart-4-code" style="display: none">st=>operation: 其他语句
 e=>operation: 其他语句
 cond1=>condition: 表达式=常量值1
 cond2=>condition: 表达式=常量值2
@@ -1240,7 +1240,7 @@ cond1(no)->cond2
 cond2(yes)->op2->e
 cond2(no)->conddots
 conddots(yes)->opdots->e
-conddots(no)->opn+1->e</textarea><textarea id="flowchart-4-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-4-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-4-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-4", options);</script><textarea id="flowchart-5-code" style="display: none">st=>operation: 其他语句
+conddots(no)->opn+1->e</textarea><textarea id="flowchart-4-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-4-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-4-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-4", options);</script><textarea id="flowchart-5-code" style="display: none">st=>operation: 其他语句
 e=>operation: 其他语句
 op1=>operation: 初始化语句
 cond=>condition: 条件判断语句
@@ -1248,7 +1248,7 @@ op2=>operation: 循环体语句
 op3=>operation: 步进语句
 st->op1->cond
 cond(yes)->op2->op3(left)->cond
-cond(no)->e</textarea><textarea id="flowchart-5-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-5-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-5-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-5", options);</script><textarea id="flowchart-6-code" style="display: none">st=>operation: 其他语句
+cond(no)->e</textarea><textarea id="flowchart-5-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-5-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-5-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-5", options);</script><textarea id="flowchart-6-code" style="display: none">st=>operation: 其他语句
 e=>operation: 其他语句
 op1=>operation: 初始化语句
 cond=>condition: 条件判断语句
@@ -1256,7 +1256,7 @@ op2=>operation: 循环体语句
 op3=>operation: 步进语句
 st->op1->cond
 cond(yes)->op2->op3(left)->cond
-cond(no)->e</textarea><textarea id="flowchart-6-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-6-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-6-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-6", options);</script><textarea id="flowchart-7-code" style="display: none">st=>operation: 其他语句
+cond(no)->e</textarea><textarea id="flowchart-6-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-6-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-6-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-6", options);</script><textarea id="flowchart-7-code" style="display: none">st=>operation: 其他语句
 e=>operation: 其他语句
 op1=>operation: 初始化语句
 cond=>condition: 条件判断语句
@@ -1264,7 +1264,7 @@ op2=>operation: 循环体语句
 op3=>operation: 步进语句
 st->op1->op2->op3->cond
 cond(yes)->op2
-cond(no)->e</textarea><textarea id="flowchart-7-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-7-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-7-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-7", options);</script></li>
+cond(no)->e</textarea><textarea id="flowchart-7-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-7-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-7-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-7", options);</script></li>
 </ul>
 
       
@@ -1433,7 +1433,7 @@ cond(no)->e</textarea><textarea id="flowchart-7-options" style="display: none">{
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
