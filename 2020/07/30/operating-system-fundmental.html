@@ -148,30 +148,31 @@
   <meta name="description" content="操作系统概述基本概念 操作系统（Operating System，简称 OS）是管理计算机硬件与软件资源的程序，是计算机系统的内核与基石； 操作系统本质上是运行在计算机上的软件程序 ； 操作系统为用户提供一个与系统交互的操作界面 ； 操作系统分内核（Kernel）与外壳（Shell）。  基本特征 并发 并发是指宏观上在一段时间内能同时运行多个程序，而并行则指同一时刻能运行多个指令。 并行需要硬件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="操作系统基础">
-<meta property="og:url" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental.html">
+<meta property="og:url" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental.html">
 <meta property="og:site_name" content="Flexia&#39;s Blog">
 <meta property="og:description" content="操作系统概述基本概念 操作系统（Operating System，简称 OS）是管理计算机硬件与软件资源的程序，是计算机系统的内核与基石； 操作系统本质上是运行在计算机上的软件程序 ； 操作系统为用户提供一个与系统交互的操作界面 ； 操作系统分内核（Kernel）与外壳（Shell）。  基本特征 并发 并发是指宏观上在一段时间内能同时运行多个程序，而并行则指同一时刻能运行多个指令。 并行需要硬件">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/tGPV0.png">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/2_14_microkernelArchitecture.jpg">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/ProcessState.png">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/8c662999-c16c-481c-9f40-1fdba5bc9167.png">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/042cf928-3c8e-4815-ae9c-f2780202c68f.png">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/b1fa0453-a4b0-4eae-a352-48acca8fff74.png">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/e1eda3d5-5ec8-4708-8e25-1a04c5e11f48.png">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/ed523051-608f-4c3f-b343-383e2d194470.png">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/d160ec2e-cfe2-4640-bda7-62f53e58b8c0.png">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/62e0dd4f-44c3-43ee-bb6e-fedb9e068519.png">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/cf4386a1-58c9-4eca-a17f-e12b1e9770eb.png">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/22de0538-7c6e-4365-bd3b-8ce3c5900216.png">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/e0900bb2-220a-43b7-9aa9-1d5cd55ff56e.png">
-<meta property="og:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/014fbc4d-d873-4a12-b160-867ddaed9807.jpg">
-<meta property="article:published_time" content="2020-07-29T11:04:00.000Z">
-<meta property="article:modified_time" content="2020-07-29T13:30:48.014Z">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/tGPV0.png">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/9765867_1590763113583_5A9F6A51E994577B680762E995D412F0">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/2_14_microkernelArchitecture.jpg">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/ProcessState.png">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/8c662999-c16c-481c-9f40-1fdba5bc9167.png">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/042cf928-3c8e-4815-ae9c-f2780202c68f.png">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/b1fa0453-a4b0-4eae-a352-48acca8fff74.png">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/e1eda3d5-5ec8-4708-8e25-1a04c5e11f48.png">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/ed523051-608f-4c3f-b343-383e2d194470.png">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/d160ec2e-cfe2-4640-bda7-62f53e58b8c0.png">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/62e0dd4f-44c3-43ee-bb6e-fedb9e068519.png">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/cf4386a1-58c9-4eca-a17f-e12b1e9770eb.png">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/22de0538-7c6e-4365-bd3b-8ce3c5900216.png">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/e0900bb2-220a-43b7-9aa9-1d5cd55ff56e.png">
+<meta property="og:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/014fbc4d-d873-4a12-b160-867ddaed9807.jpg">
+<meta property="article:published_time" content="2020-07-30T10:10:00.000Z">
+<meta property="article:modified_time" content="2020-07-30T10:10:01.328Z">
 <meta property="article:author" content="Flexia">
 <meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://fangfengxin.top/2020/07/29/operating-system-fundmental/tGPV0.png">
+<meta name="twitter:image" content="https://fangfengxin.top/2020/07/30/operating-system-fundmental/tGPV0.png">
 
 
 
@@ -179,7 +180,7 @@
 
   
   
-  <link rel="canonical" href="https://fangfengxin.top/2020/07/29/operating-system-fundmental"/>
+  <link rel="canonical" href="https://fangfengxin.top/2020/07/30/operating-system-fundmental"/>
 
 
 
@@ -459,7 +460,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fangfengxin.top/2020/07/29/operating-system-fundmental.html"/>
+    <link itemprop="mainEntityOfPage" href="https://fangfengxin.top/2020/07/30/operating-system-fundmental.html"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Flexia"/>
@@ -502,7 +503,7 @@
                 
               
 
-              <time title="创建时间：2020-07-29 19:04:00 / 修改时间：21:30:48" itemprop="dateCreated datePublished" datetime="2020-07-29T19:04:00+08:00">2020-07-29</time>
+              <time title="创建时间：2020-07-30 18:10:00 / 修改时间：18:10:01" itemprop="dateCreated datePublished" datetime="2020-07-30T18:10:00+08:00">2020-07-30</time>
             </span>
           
 
@@ -541,8 +542,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2020/07/29/operating-system-fundmental.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/29/operating-system-fundmental.html" itemprop="commentCount"></span>
+                <a href="/2020/07/30/operating-system-fundmental.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/30/operating-system-fundmental.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -564,7 +565,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">10k</span>
+              <span title="本文字数">11k</span>
             </span>
           
 
@@ -576,7 +577,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">9 分钟</span>
+              <span title="阅读时长">10 分钟</span>
             </span>
           
 
@@ -646,49 +647,26 @@
 </ul>
 </li>
 </ol>
-<h2 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h2><ul>
-<li>如果一个进程在<strong>用户态</strong>需要使用<strong>内核态</strong>的功能，就进行系统调用从而陷入内核，由操作系统代为完成。</li>
+<h2 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h2><ol>
+<li><strong>什么是系统调用</strong><ul>
+<li>操作系统作为用户和计算机硬件之间的接口，需要向上提供一些简单易用的服务。主要包括命令接口和程序接口。其中，程序接口由一组系统调用组成。</li>
+<li><strong>系统调用是操作系统提供给应用程序使用的接口</strong>，可以理解为一种可供应用程序调用的特殊函数，应用程序可以通过系统调用来请求获得操作系统内核的服务。</li>
 </ul>
-<p><img src="/2020/07/29/operating-system-fundmental/tGPV0.png" alt></p>
-<ul>
-<li>Linux 的系统调用主要有以下这些：</li>
+</li>
+<li><strong>系统调用与库函数的区别</strong><ul>
+<li>编程语言向上提供库函数。有时会将系统调用封装成库函数，以隐藏系统调用的一些细节，使程序员编程更加方便。</li>
+<li>操作系统向上提供系统调用，使得上层程序能请求内核的服务。</li>
+<li>普通应用程序可直接进行系统调用，也可使用库函数。有的库函数涉及系统调用，有的不涉及。</li>
 </ul>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>Task</th>
-<th>Commands</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>进程控制</td>
-<td>fork(); exit(); wait();</td>
-</tr>
-<tr>
-<td>进程通信</td>
-<td>pipe(); shmget(); mmap();</td>
-</tr>
-<tr>
-<td>文件操作</td>
-<td>open(); read(); write();</td>
-</tr>
-<tr>
-<td>设备操作</td>
-<td>ioctl(); read(); write();</td>
-</tr>
-<tr>
-<td>信息维护</td>
-<td>getpid(); alarm(); sleep();</td>
-</tr>
-<tr>
-<td>安全</td>
-<td>chmod(); umask(); chown();</td>
-</tr>
-</tbody>
-</table>
-</div>
+</li>
+<li><strong>什么功能要用到系统调用</strong><ul>
+<li>凡是与共享资源有关的、会影响到其它进程的操作（如存储分配、I/O 操作、文件管理等），一定需要操作系统介入，需要通过系统调用来实现。这样可以保证系统的稳定性和安全性，防止用户进行非法操作。</li>
+<li>简单来说，如果一个进程在<strong>用户态</strong>需要使用<strong>内核态</strong>的功能，就进行系统调用从而陷入内核，由操作系统代为完成。</li>
+</ul>
+</li>
+</ol>
+<p><img src="/2020/07/30/operating-system-fundmental/tGPV0.png" alt></p>
+<p><img src="/2020/07/30/operating-system-fundmental/9765867_1590763113583_5A9F6A51E994577B680762E995D412F0" alt></p>
 <h2 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h2><ol>
 <li><strong>大内核</strong><ul>
 <li><strong>大内核是将操作系统功能作为一个紧密结合的整体放到内核。</strong></li>
@@ -702,7 +680,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/2020/07/29/operating-system-fundmental/2_14_microkernelArchitecture.jpg" alt></p>
+<p><img src="/2020/07/30/operating-system-fundmental/2_14_microkernelArchitecture.jpg" alt></p>
 <h2 id="中断分类"><a href="#中断分类" class="headerlink" title="中断分类"></a>中断分类</h2><ol>
 <li><strong>外中断</strong><ul>
 <li><strong>由 CPU 执行指令以外的事件引起。</strong></li>
@@ -753,7 +731,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="进程状态的切换"><a href="#进程状态的切换" class="headerlink" title="进程状态的切换"></a>进程状态的切换</h2><p><img src="/2020/07/29/operating-system-fundmental/ProcessState.png" alt></p>
+<h2 id="进程状态的切换"><a href="#进程状态的切换" class="headerlink" title="进程状态的切换"></a>进程状态的切换</h2><p><img src="/2020/07/30/operating-system-fundmental/ProcessState.png" alt></p>
 <ul>
 <li>5 种状态：<ul>
 <li>创建状态（new）：正在被创建</li>
@@ -795,7 +773,7 @@
 <li>将所有就绪进程按 FCFS 的原则排成一个队列，每次调度时，把 CPU 时间分配给队首进程，该进程可以执行一个时间片。当时间片用完时，由计时器发出时钟中断，调度程序便停止该进程的执行，并将它送往就绪队列的末尾，同时继续把 CPU 时间分配给队首的进程。</li>
 <li>时间片轮转算法的效率和时间片的大小有很大关系：<ul>
 <li>因为进程切换都要保存进程的信息并且载入新进程的信息，如果时间片太小，会导致进程切换得太频繁，在进程切换上就会花过多时间。</li>
-<li>而如果时间片过长，那么实时性就不能得到保证。<img src="/2020/07/29/operating-system-fundmental/8c662999-c16c-481c-9f40-1fdba5bc9167.png" alt></li>
+<li>而如果时间片过长，那么实时性就不能得到保证。<img src="/2020/07/30/operating-system-fundmental/8c662999-c16c-481c-9f40-1fdba5bc9167.png" alt></li>
 </ul>
 </li>
 </ul>
@@ -811,7 +789,7 @@
 <li>新的进程会被放入到第一级队列的末尾，按先来先服务的原则排队等待被调度，如果在第一级队列规定的时间片没运行完成，则将其转入到第二级队列的末尾，以此类推，直至完成。</li>
 <li>当较高优先级的队列为空，才调度较低优先级的队列中的进程运行。如果进程运行时，有新进程进入较高优先级的队列，则停止当前运行的进程并将其移入到原队列末尾，接着让较高优先级的进程运行。</li>
 <li>可以发现，对于短作业可能可以在第一级队列很快被处理完。对于长作业，如果在第一级队列处理不完，可以移入下一级队列等待被执行，虽然等待的时间变长了，但是运行时间也会更长了，所以该算法很好的<strong>兼顾了长短作业，同时有较好的响应时间。</strong></li>
-<li>可以将这种调度算法看成是时间片轮转调度算法和优先级调度算法的结合。<img src="/2020/07/29/operating-system-fundmental/042cf928-3c8e-4815-ae9c-f2780202c68f.png" alt></li>
+<li>可以将这种调度算法看成是时间片轮转调度算法和优先级调度算法的结合。<img src="/2020/07/30/operating-system-fundmental/042cf928-3c8e-4815-ae9c-f2780202c68f.png" alt></li>
 </ul>
 </li>
 </ul>
@@ -889,7 +867,7 @@
 </ul>
 </li>
 <li><strong>FIFO（命名管道）</strong><ul>
-<li>本质是一个文件，去除了管道只能在父子进程中使用的限制，可以<strong>在任意进程中使用</strong>。</li>
+<li>本质是一个磁盘文件，去除了管道只能在父子进程中使用的限制，可以<strong>在任意进程中使用</strong>。</li>
 <li>速度慢，容量有限。</li>
 <li>FIFO 常用于 C/S 应用程序中，FIFO 用作汇聚点，在客户进程和服务器进程之间传递数据。</li>
 </ul>
@@ -970,13 +948,13 @@
 <h2 id="死锁检测与死锁恢复"><a href="#死锁检测与死锁恢复" class="headerlink" title="死锁检测与死锁恢复"></a>死锁检测与死锁恢复</h2><ul>
 <li>不试图阻止死锁，而是当检测到死锁发生时，采取措施进行恢复。</li>
 </ul>
-<h3 id="每种类型一个资源的死锁检测"><a href="#每种类型一个资源的死锁检测" class="headerlink" title="每种类型一个资源的死锁检测"></a>每种类型一个资源的死锁检测</h3><p><img src="/2020/07/29/operating-system-fundmental/b1fa0453-a4b0-4eae-a352-48acca8fff74.png" alt></p>
+<h3 id="每种类型一个资源的死锁检测"><a href="#每种类型一个资源的死锁检测" class="headerlink" title="每种类型一个资源的死锁检测"></a>每种类型一个资源的死锁检测</h3><p><img src="/2020/07/30/operating-system-fundmental/b1fa0453-a4b0-4eae-a352-48acca8fff74.png" alt></p>
 <ul>
 <li>上图为资源分配图，其中方框表示资源，圆圈表示进程。资源指向进程表示该资源已经分配给该进程，进程指向资源表示进程请求获取该资源。</li>
 <li>图 a 可以抽取出环，如图 b，它满足了环路等待条件，因此会发生死锁。</li>
 <li>每种类型一个资源的死锁检测算法是<strong>通过检测有向图是否存在环来实现，从一个节点出发进行深度优先搜索，对访问过的节点进行标记，如果访问了已经标记的节点，就表示有向图存在环，也就是检测到死锁的发生。</strong></li>
 </ul>
-<h3 id="每种类型多个资源的死锁检测"><a href="#每种类型多个资源的死锁检测" class="headerlink" title="每种类型多个资源的死锁检测"></a>每种类型多个资源的死锁检测</h3><p><img src="/2020/07/29/operating-system-fundmental/e1eda3d5-5ec8-4708-8e25-1a04c5e11f48.png" alt></p>
+<h3 id="每种类型多个资源的死锁检测"><a href="#每种类型多个资源的死锁检测" class="headerlink" title="每种类型多个资源的死锁检测"></a>每种类型多个资源的死锁检测</h3><p><img src="/2020/07/30/operating-system-fundmental/e1eda3d5-5ec8-4708-8e25-1a04c5e11f48.png" alt></p>
 <ul>
 <li>上图中，有三个进程四个资源，每个数据代表的含义如下：<ul>
 <li>E 向量：资源总量</li>
@@ -1023,7 +1001,7 @@
 <h2 id="死锁避免"><a href="#死锁避免" class="headerlink" title="死锁避免"></a>死锁避免</h2><ul>
 <li>在程序运行时避免发生死锁。</li>
 </ul>
-<h3 id="安全状态"><a href="#安全状态" class="headerlink" title="安全状态"></a>安全状态</h3><p><img src="/2020/07/29/operating-system-fundmental/ed523051-608f-4c3f-b343-383e2d194470.png" alt></p>
+<h3 id="安全状态"><a href="#安全状态" class="headerlink" title="安全状态"></a>安全状态</h3><p><img src="/2020/07/30/operating-system-fundmental/ed523051-608f-4c3f-b343-383e2d194470.png" alt></p>
 <ul>
 <li>图 a 的第二列 Has 表示已拥有的资源数，第三列 Max 表示总共需要的资源数，Free 表示还有可以使用的资源数。从图 a 开始出发，先让 B 拥有所需的所有资源（图 b），运行结束后释放 B，此时 Free 变为 5（图 c）；接着以同样的方式运行 C 和 A，使得所有进程都能成功运行，因此可以称图 a 所示的状态时安全的。\</li>
 <li>定义：<strong>如果没有死锁发生，并且即使所有进程突然请求对资源的最大需求，也仍然存在某种调度次序能够使得每一个进程运行完毕，则称该状态是安全的</strong>。</li>
@@ -1032,11 +1010,11 @@
 <h3 id="单个资源的银行家算法"><a href="#单个资源的银行家算法" class="headerlink" title="单个资源的银行家算法"></a>单个资源的银行家算法</h3><ul>
 <li>一个小城镇的银行家，他向一群客户分别承诺了一定的贷款额度，算法要做的是判断对请求的满足是否会进入不安全状态，如果是，就拒绝请求；否则予以分配。</li>
 </ul>
-<p><img src="/2020/07/29/operating-system-fundmental/d160ec2e-cfe2-4640-bda7-62f53e58b8c0.png" alt></p>
+<p><img src="/2020/07/30/operating-system-fundmental/d160ec2e-cfe2-4640-bda7-62f53e58b8c0.png" alt></p>
 <ul>
 <li>上图 c 为不安全状态，因此算法会拒绝之前的请求，从而避免进入图 c 中的状态。</li>
 </ul>
-<h3 id="多个资源的银行家算法"><a href="#多个资源的银行家算法" class="headerlink" title="多个资源的银行家算法"></a>多个资源的银行家算法</h3><p><img src="/2020/07/29/operating-system-fundmental/62e0dd4f-44c3-43ee-bb6e-fedb9e068519.png" alt></p>
+<h3 id="多个资源的银行家算法"><a href="#多个资源的银行家算法" class="headerlink" title="多个资源的银行家算法"></a>多个资源的银行家算法</h3><p><img src="/2020/07/30/operating-system-fundmental/62e0dd4f-44c3-43ee-bb6e-fedb9e068519.png" alt></p>
 <ul>
 <li>上图中有五个进程，四个资源。左边的图表示已经分配的资源，右边的图表示还需要分配的资源。最右边的 E、P 以及 A 分别表示：总资源、已分配资源以及可用资源，注意这三个为向量，而不是具体数值，例如 A=(1020)，表示 4 个资源分别还剩下 1/0/2/0。</li>
 <li><strong>检查一个状态是否安全的算法如下：</strong><ul>
@@ -1047,7 +1025,38 @@
 </li>
 <li><strong>如果一个状态不是安全的，需要拒绝进入这个状态。</strong></li>
 </ul>
-<h1 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><ul>
+<h1 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><h2 id="内存管理介绍"><a href="#内存管理介绍" class="headerlink" title="内存管理介绍"></a>内存管理介绍</h2><ol>
+<li><strong>内存分配与回收</strong>；</li>
+<li><strong>虚拟内存</strong>：从逻辑上对内存空间进行扩充；</li>
+<li><strong>地址映射</strong>：负责程序的逻辑地址与物理地址的转换；</li>
+<li><strong>内存保护</strong>：保证进程间在各自存储空间内运行，互不干扰。</li>
+</ol>
+<h2 id="4-种内存管理机制"><a href="#4-种内存管理机制" class="headerlink" title="4 种内存管理机制"></a>4 种内存管理机制</h2><ol>
+<li><strong>块式管理</strong><ul>
+<li>将内存分为几个固定大小的块，每个块中只包含一个进程。如果程序运行需要内存的话，操作系统就分配给它一块。</li>
+<li>如果程序运行只需要很小的空间的话，分配的这块内存很大一部分几乎被浪费了。这些在每个块中未被利用的空间，称之为碎片。</li>
+</ul>
+</li>
+<li><strong>页式管理</strong><ul>
+<li>把主存分为大小相等且固定的一页一页的形式，页较小，相对相比于块式管理的划分力度更大，提高了内存利用率，减少了碎片。</li>
+<li>页式管理通过页表对应逻辑地址和物理地址。</li>
+</ul>
+</li>
+<li><strong>段式管理</strong><ul>
+<li>页式管理虽然提高了内存利用率，但是页式管理其中的页实际并无任何实际意义。 </li>
+<li>段式管理把主存分为一段段的，每一段的空间又要比一页的空间小很多 。</li>
+<li>但是，最重要的是段是有实际意义的，每个段定义了一组逻辑信息，例如，有主程序段 MAIN、子程序段 X、数据段 D 及栈段 S 等。</li>
+<li>段式管理通过段表对应逻辑地址和物理地址。</li>
+</ul>
+</li>
+<li><strong>段页式管理</strong><ul>
+<li>段页式管理机制结合了段式管理和页式管理的优点。</li>
+<li>简单来说段页式管理机制就是把主存先分成若干段，每个段又分成若干页。</li>
+<li>也就是说段页式管理机制中段与段之间以及段的内部的都是离散的。</li>
+</ul>
+</li>
+</ol>
+<h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><ul>
 <li>虚拟内存的目的是为了<strong>让物理内存扩充成更大的逻辑内存，从而让程序获得更多的可用内存</strong>。</li>
 <li>为了更好的管理内存，<strong>操作系统将内存抽象成地址空间</strong>。每个程序拥有自己的地址空间，这个地址空间被分割成多个块，每一块称为一页。这些页被映射到物理内存，但不需要映射到连续的物理内存，也不需要所有页都必须在物理内存中。当程序引用到不在物理内存中的页时，由硬件执行必要的映射，将缺失的部分装入物理内存并重新执行失败的指令。</li>
 <li>从上面的描述中可以看出，<strong>虚拟内存允许程序不用将地址空间中的每一页都映射到物理内存，也就是说一个程序不需要全部调入内存就可以运行，这使得有限的内存运行大程序成为可能。</strong>例如有一台计算机可以产生 16 位地址，那么一个程序的地址空间范围是 0~64K。该计算机只有 32KB 的物理内存，虚拟内存技术允许该计算机运行一个 64K 大小的程序。</li>
@@ -1057,7 +1066,7 @@
 <li>一个虚拟地址分成两个部分，一部分存储页面号，一部分存储偏移量。</li>
 <li>下图的页表存放着 16 个页，这 16 个页需要用 4 个比特位来进行索引定位。例如对于虚拟地址（0010 000000000100），前 4 位是存储页面号 2，读取表项内容为（110 1），页表项最后一位表示是否存在于内存中，1 表示存在。后 12 位存储偏移量。这个页对应的页框的地址为 （110 000000000100）。</li>
 </ul>
-<p><img src="/2020/07/29/operating-system-fundmental/cf4386a1-58c9-4eca-a17f-e12b1e9770eb.png" alt></p>
+<p><img src="/2020/07/30/operating-system-fundmental/cf4386a1-58c9-4eca-a17f-e12b1e9770eb.png" alt></p>
 <h2 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h2><ul>
 <li>在程序运行过程中，如果要访问的页面不在内存中，就发生<strong>缺页中断</strong>从而<strong>将该页调入内存中</strong>。此时如果内存已无空闲空间，系统必须<strong>从内存中调出一个页面到磁盘对换区中来腾出空间</strong>。</li>
 <li>页面置换算法和缓存淘汰策略类似，可以将内存看成磁盘的缓存。在缓存系统中，缓存的大小有限，当有新的缓存到达时，需要淘汰一部分已经存在的缓存，这样才有空间存放新的缓存数据。</li>
@@ -1105,11 +1114,11 @@
 <li>虚拟内存采用的是分页技术，也就是将地址空间划分成固定大小的页，每一页再与内存进行映射。</li>
 <li>下图为一个编译器在编译过程中建立的多个表，有 4 个表是动态增长的，如果使用分页系统的一维地址空间，动态增长的特点会导致覆盖问题的出现。</li>
 </ul>
-<p><img src="/2020/07/29/operating-system-fundmental/22de0538-7c6e-4365-bd3b-8ce3c5900216.png" alt></p>
+<p><img src="/2020/07/30/operating-system-fundmental/22de0538-7c6e-4365-bd3b-8ce3c5900216.png" alt></p>
 <ul>
 <li><strong>分段的做法是把每个表分成段，一个段构成一个独立的地址空间。每个段的长度可以不同，并且可以动态增长。</strong></li>
 </ul>
-<p><img src="/2020/07/29/operating-system-fundmental/e0900bb2-220a-43b7-9aa9-1d5cd55ff56e.png" alt></p>
+<p><img src="/2020/07/30/operating-system-fundmental/e0900bb2-220a-43b7-9aa9-1d5cd55ff56e.png" alt></p>
 <h2 id="段页式"><a href="#段页式" class="headerlink" title="段页式"></a>段页式</h2><ul>
 <li><strong>程序的地址空间划分成多个拥有独立地址空间的段，每个段上的地址空间划分成大小相同的页。</strong></li>
 <li>这样既拥有分段系统的共享和保护，又拥有分页系统的虚拟内存功能。</li>
@@ -1128,7 +1137,7 @@
 <li>制动手臂（Actuator arm）：用于在磁道之间移动磁头；</li>
 <li>主轴（Spindle）：使整个盘面转动。</li>
 </ul>
-<p><img src="/2020/07/29/operating-system-fundmental/014fbc4d-d873-4a12-b160-867ddaed9807.jpg" alt></p>
+<p><img src="/2020/07/30/operating-system-fundmental/014fbc4d-d873-4a12-b160-867ddaed9807.jpg" alt></p>
 <h2 id="磁盘调度算法"><a href="#磁盘调度算法" class="headerlink" title="磁盘调度算法"></a>磁盘调度算法</h2><ul>
 <li>读写一个磁盘块的时间的影响因素有：<ul>
 <li>旋转时间（主轴转动盘面，使得磁头移动到适当的扇区上）</li>
@@ -1546,7 +1555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统概述"><span class="nav-number">1.</span> <span class="nav-text">操作系统概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本特征"><span class="nav-number">1.2.</span> <span class="nav-text">基本特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本功能"><span class="nav-number">1.3.</span> <span class="nav-text">基本功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统调用"><span class="nav-number">1.4.</span> <span class="nav-text">系统调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内核"><span class="nav-number">1.5.</span> <span class="nav-text">内核</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中断分类"><span class="nav-number">1.6.</span> <span class="nav-text">中断分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进程管理"><span class="nav-number">2.</span> <span class="nav-text">进程管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程与线程"><span class="nav-number">2.1.</span> <span class="nav-text">进程与线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程状态的切换"><span class="nav-number">2.2.</span> <span class="nav-text">进程状态的切换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程调度算法"><span class="nav-number">2.3.</span> <span class="nav-text">进程调度算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程同步"><span class="nav-number">2.4.</span> <span class="nav-text">进程同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程通信"><span class="nav-number">2.5.</span> <span class="nav-text">进程通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程同步"><span class="nav-number">2.6.</span> <span class="nav-text">线程同步</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#死锁"><span class="nav-number">3.</span> <span class="nav-text">死锁</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#必要条件"><span class="nav-number">3.1.</span> <span class="nav-text">必要条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理方法"><span class="nav-number">3.2.</span> <span class="nav-text">处理方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸵鸟策略"><span class="nav-number">3.3.</span> <span class="nav-text">鸵鸟策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁检测与死锁恢复"><span class="nav-number">3.4.</span> <span class="nav-text">死锁检测与死锁恢复</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#每种类型一个资源的死锁检测"><span class="nav-number">3.4.1.</span> <span class="nav-text">每种类型一个资源的死锁检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#每种类型多个资源的死锁检测"><span class="nav-number">3.4.2.</span> <span class="nav-text">每种类型多个资源的死锁检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#死锁恢复"><span class="nav-number">3.4.3.</span> <span class="nav-text">死锁恢复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁预防"><span class="nav-number">3.5.</span> <span class="nav-text">死锁预防</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁避免"><span class="nav-number">3.6.</span> <span class="nav-text">死锁避免</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安全状态"><span class="nav-number">3.6.1.</span> <span class="nav-text">安全状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单个资源的银行家算法"><span class="nav-number">3.6.2.</span> <span class="nav-text">单个资源的银行家算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个资源的银行家算法"><span class="nav-number">3.6.3.</span> <span class="nav-text">多个资源的银行家算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内存管理"><span class="nav-number">4.</span> <span class="nav-text">内存管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#虚拟内存"><span class="nav-number">4.1.</span> <span class="nav-text">虚拟内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分页系统地址映射"><span class="nav-number">4.2.</span> <span class="nav-text">分页系统地址映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#页面置换算法"><span class="nav-number">4.3.</span> <span class="nav-text">页面置换算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最佳（OPT）"><span class="nav-number">4.3.1.</span> <span class="nav-text">最佳（OPT）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最近最少使用（LRU）"><span class="nav-number">4.3.2.</span> <span class="nav-text">最近最少使用（LRU）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最近未使用（NRU）"><span class="nav-number">4.3.3.</span> <span class="nav-text">最近未使用（NRU）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先进先出（FIFO"><span class="nav-number">4.3.4.</span> <span class="nav-text">先进先出（FIFO)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二次机会算法"><span class="nav-number">4.3.5.</span> <span class="nav-text">第二次机会算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时钟"><span class="nav-number">4.3.6.</span> <span class="nav-text">时钟</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分段"><span class="nav-number">4.4.</span> <span class="nav-text">分段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#段页式"><span class="nav-number">4.5.</span> <span class="nav-text">段页式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分页与分段的比较"><span class="nav-number">4.6.</span> <span class="nav-text">分页与分段的比较</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设备管理"><span class="nav-number">5.</span> <span class="nav-text">设备管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#磁盘结构"><span class="nav-number">5.1.</span> <span class="nav-text">磁盘结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#磁盘调度算法"><span class="nav-number">5.2.</span> <span class="nav-text">磁盘调度算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先来先服务"><span class="nav-number">5.2.1.</span> <span class="nav-text">先来先服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最短寻道时间优先"><span class="nav-number">5.2.2.</span> <span class="nav-text">最短寻道时间优先</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电梯算法"><span class="nav-number">5.2.3.</span> <span class="nav-text">电梯算法</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统概述"><span class="nav-number">1.</span> <span class="nav-text">操作系统概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本特征"><span class="nav-number">1.2.</span> <span class="nav-text">基本特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本功能"><span class="nav-number">1.3.</span> <span class="nav-text">基本功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统调用"><span class="nav-number">1.4.</span> <span class="nav-text">系统调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内核"><span class="nav-number">1.5.</span> <span class="nav-text">内核</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中断分类"><span class="nav-number">1.6.</span> <span class="nav-text">中断分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进程管理"><span class="nav-number">2.</span> <span class="nav-text">进程管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程与线程"><span class="nav-number">2.1.</span> <span class="nav-text">进程与线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程状态的切换"><span class="nav-number">2.2.</span> <span class="nav-text">进程状态的切换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程调度算法"><span class="nav-number">2.3.</span> <span class="nav-text">进程调度算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程同步"><span class="nav-number">2.4.</span> <span class="nav-text">进程同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程通信"><span class="nav-number">2.5.</span> <span class="nav-text">进程通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程同步"><span class="nav-number">2.6.</span> <span class="nav-text">线程同步</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#死锁"><span class="nav-number">3.</span> <span class="nav-text">死锁</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#必要条件"><span class="nav-number">3.1.</span> <span class="nav-text">必要条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理方法"><span class="nav-number">3.2.</span> <span class="nav-text">处理方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸵鸟策略"><span class="nav-number">3.3.</span> <span class="nav-text">鸵鸟策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁检测与死锁恢复"><span class="nav-number">3.4.</span> <span class="nav-text">死锁检测与死锁恢复</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#每种类型一个资源的死锁检测"><span class="nav-number">3.4.1.</span> <span class="nav-text">每种类型一个资源的死锁检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#每种类型多个资源的死锁检测"><span class="nav-number">3.4.2.</span> <span class="nav-text">每种类型多个资源的死锁检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#死锁恢复"><span class="nav-number">3.4.3.</span> <span class="nav-text">死锁恢复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁预防"><span class="nav-number">3.5.</span> <span class="nav-text">死锁预防</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁避免"><span class="nav-number">3.6.</span> <span class="nav-text">死锁避免</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安全状态"><span class="nav-number">3.6.1.</span> <span class="nav-text">安全状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单个资源的银行家算法"><span class="nav-number">3.6.2.</span> <span class="nav-text">单个资源的银行家算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个资源的银行家算法"><span class="nav-number">3.6.3.</span> <span class="nav-text">多个资源的银行家算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内存管理"><span class="nav-number">4.</span> <span class="nav-text">内存管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#内存管理介绍"><span class="nav-number">4.1.</span> <span class="nav-text">内存管理介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-种内存管理机制"><span class="nav-number">4.2.</span> <span class="nav-text">4 种内存管理机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#虚拟内存"><span class="nav-number">4.3.</span> <span class="nav-text">虚拟内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分页系统地址映射"><span class="nav-number">4.4.</span> <span class="nav-text">分页系统地址映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#页面置换算法"><span class="nav-number">4.5.</span> <span class="nav-text">页面置换算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最佳（OPT）"><span class="nav-number">4.5.1.</span> <span class="nav-text">最佳（OPT）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最近最少使用（LRU）"><span class="nav-number">4.5.2.</span> <span class="nav-text">最近最少使用（LRU）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最近未使用（NRU）"><span class="nav-number">4.5.3.</span> <span class="nav-text">最近未使用（NRU）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先进先出（FIFO"><span class="nav-number">4.5.4.</span> <span class="nav-text">先进先出（FIFO)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二次机会算法"><span class="nav-number">4.5.5.</span> <span class="nav-text">第二次机会算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时钟"><span class="nav-number">4.5.6.</span> <span class="nav-text">时钟</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分段"><span class="nav-number">4.6.</span> <span class="nav-text">分段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#段页式"><span class="nav-number">4.7.</span> <span class="nav-text">段页式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分页与分段的比较"><span class="nav-number">4.8.</span> <span class="nav-text">分页与分段的比较</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设备管理"><span class="nav-number">5.</span> <span class="nav-text">设备管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#磁盘结构"><span class="nav-number">5.1.</span> <span class="nav-text">磁盘结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#磁盘调度算法"><span class="nav-number">5.2.</span> <span class="nav-text">磁盘调度算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先来先服务"><span class="nav-number">5.2.1.</span> <span class="nav-text">先来先服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最短寻道时间优先"><span class="nav-number">5.2.2.</span> <span class="nav-text">最短寻道时间优先</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电梯算法"><span class="nav-number">5.2.3.</span> <span class="nav-text">电梯算法</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1579,7 +1588,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">738k</span>
+    <span title="站点总字数">739k</span>
   
 
   
@@ -1588,7 +1597,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">11:11</span>
+    <span title="站点阅读时长">11:12</span>
   
 </div>
 
